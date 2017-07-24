@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+heirloom_organic:
+  name: Heirloom Organic
+
+asymmetrical_farm_to_table:
+  name: Asymmetrical Farm To Table
+
+chambray_kitsch:
+  name: Chambray Kitsch
+
+selvage_chambray:
+  name: Selvage Chambray
+
+phlogiston_tilde:
+  name: Phlogiston Tilde
+
+humblebrag_goth:
+  name: Humblebrag Goth
+
+cornhole_occupy:
+  name: Cornhole Occupy
+
+tacos_shoreditch:
+  name: Tacos Shoreditch
+
+pinterest_franzen:
+  name: Pinterest Franzen
+
+disrupt_drinking:
+  name: Disrupt Drinking
+
+celiac_typewriter:
+  name: Celiac Typewriter
+
+cliche_blog:
+  name: Cliche Blog
+
+wayfarers_bespoke:
+  name: Wayfarers Bespoke
+
+sriracha_carry:
+  name: Sriracha Carry
+
+tattooed_vice:
+  name: Tattooed Vice
+
+offal_brooklyn:
+  name: Offal Brooklyn

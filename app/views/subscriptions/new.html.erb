@@ -1,0 +1,34 @@
+<h1>New Subscription</h1>
+
+<%= form_for(@subscription,
+             as: :subscription,
+             url: subscriptions_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product_id, "Product" %>
+    <%# TODO: show a list of products %>
+  </div>
+
+  <%= f.submit 'Subscribe' %>
+
+<% end %>
