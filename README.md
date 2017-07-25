@@ -1,24 +1,3 @@
-# README
+### The challenge:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Given a rails app with User, Product and Subscription models. Create a form for a user to register as a new user with an initial subscription to a product. The subscriptions controller and new.html.erb have been started for you. Search for TODOs to complete make the test pass.  Keep in mind ways in which the various operations might fail. Also consider how the solution might be tested.
