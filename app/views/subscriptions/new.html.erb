@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= f.label :product_id, "Product" %>
-    <%# TODO: show a list of products %>
+    <%= f.select :product_id, @subscription.product_list, prompt: "Select a product" %>
   </div>
 
   <%= f.submit 'Subscribe' %>

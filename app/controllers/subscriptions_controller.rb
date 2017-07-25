@@ -1,16 +1,30 @@
 class SubscriptionsController < ApplicationController
 
   def new
-    # TODO: create a @subscription object to submit the form with.
+    @subscription = SubscriptionForm.new
   end
 
   def create
-    # TODO: handle the form submission:
-    #   * Create the user
-    #   * Create the subscription
-    #   * Send the welcome email
-    #   * Send the subscription confirmation email
-    #   * Register the subscription with the subscription service
+    @subscription = SubscriptionForm.new(subscription_params)
+    if @subscription.subscribe_new_user
+      notice = I18n.t(:confirm_subscription,
+        user_name: @subscription.user.name,
+        product_name: @subscription.product.name)
+      redirect_to new_subscription_url, notice: notice
+    else
+      render :new
+    end
   end
 
+  private
+
+  def subscription_params
+    params.require(:subscription).permit(
+      :name,
+      :email,
+      :password,
+      :password_confirmation,
+      :product_id,
+    )
+  end
 end
