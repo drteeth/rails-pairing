@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.field_with_errors {
+  color: red;
+}
+
+.flash.notice {
+  background-color: lightgreen;
+  border: 1px solid green;
+  padding: 0.5em;
+}

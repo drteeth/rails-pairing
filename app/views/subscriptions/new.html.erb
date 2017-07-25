@@ -1,5 +1,17 @@
 <h1>New Subscription</h1>
 
+<% if @subscription.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+    <% @subscription.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for(@subscription,
              as: :subscription,
              url: subscriptions_path) do |f| %>
@@ -16,12 +28,12 @@
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, value: @subscription.password %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, value: @subscription.password_confirmation %>
   </div>
 
   <div class="field">
