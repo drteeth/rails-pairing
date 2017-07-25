@@ -5,4 +5,8 @@ class SubscriptionsApi
     @calls << { user: email, product_id: product_id }
   end
 
+  def self.calls
+    @calls
+  end
+
 end

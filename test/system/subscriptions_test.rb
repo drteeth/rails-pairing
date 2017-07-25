@@ -14,12 +14,16 @@ class SubscriptionsTest < ApplicationSystemTestCase
 
     click_on "Subscribe"
 
+    # We see a success message
     assert_selector ".flash.notice", text: "Bob Ross, you are now subscribbed to Humblebrag Goth"
 
+    # Both emails went out
     user_mail, subscription_mail = enqueued_jobs.map { |job| job.fetch(:args).take(2).join("#") }
-
     assert_equal "UserMailer#welcome_new_user", user_mail
     assert_equal "SubscriptionMailer#confirm_subscription", subscription_mail
+
+    # A call to the API was made
+    assert_equal 1, SubscriptionsApi.calls.size
   end
 
 end
