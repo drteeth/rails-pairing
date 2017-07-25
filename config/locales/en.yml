@@ -31,4 +31,4 @@
 
 en:
   hello: "Hello world"
-  confirm_subscription: "%{user_name}, you are now subscribbed to %{product_name}"
+  confirm_subscription: "%{user_name}, you are now subscribed to %{product_name}"

@@ -15,7 +15,7 @@ class SubscriptionsTest < ApplicationSystemTestCase
     click_on "Subscribe"
 
     # We see a success message
-    assert_selector ".flash.notice", text: "Bob Ross, you are now subscribbed to Humblebrag Goth"
+    assert_selector ".flash.notice", text: "Bob Ross, you are now subscribed to Humblebrag Goth"
 
     # Both emails went out
     user_mail, subscription_mail = enqueued_jobs.map { |job| job.fetch(:args).take(2).join("#") }
