@@ -17,12 +17,7 @@ class SubscriptionForm
 
   def subscribe_new_user
     if valid?
-      @subscription = UserSubscriber.new.subscribe(
-        name: name,
-        email: email,
-        password: password,
-        product_id: product_id,
-      )
+
     end
   end
 
